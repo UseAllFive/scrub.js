@@ -1,0 +1,55 @@
+<!doctype html>
+<html>
+    <head>
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+        <style type="text/css">
+        #container {
+            height: 5000px;
+        }
+        #video {
+            -ms-transform: translate(-50%, -50%);
+            -moz-transform: translate(-50%, -50%);
+            -webkit-transform: translate(-50%,-50%);
+            transform: translate(-50%, -50%);
+            left: 50%;
+            position: fixed;
+            top: 50%;
+        }
+        #loading {
+            -ms-transform: translate(-50%, -50%);
+            -moz-transform: translate(-50%, -50%);
+            -webkit-transform: translate(-50%,-50%);
+            transform: translate(-50%, -50%);
+            position: absolute;
+            left: 50%;
+            top: 50%;
+        }
+        </style>
+        <link rel="icon" type="image/png" href="logo.png">
+    </head>
+    <body>
+        <div id="container">
+            <div id="loading">Loading video...</div>
+            <video id="video"></video>
+        </div>
+        <script src="http://code.jquery.com/jquery-2.1.1.min.js"></script>
+        <script src="dist/scrub.min.js"></script>
+        <script>
+            var $loading = $('#loading');
+            var $video = $('#video');
+            var baseUrl = 'http://d37cztry6hjvzg.cloudfront.net/mp4/ua5/';
+
+            $video.on('loaded', function() {
+                $loading.hide();
+                $video.show();
+            });
+
+            $video.scrub({
+                urls: [
+                    baseUrl + 'aboutBg.mov',
+                    baseUrl + 'aboutBg.ogv'
+                ]
+            });            
+        </script>
+    </body>
+</html>

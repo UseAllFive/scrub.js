@@ -1,0 +1,69 @@
+<!doctype html>
+<html>
+    <head>
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+        <style type="text/css">
+        body {
+            height: 2500px;
+        }
+        #container {
+            border: 1px solid #ccc;
+            height: 900px;
+            margin: 0px auto;
+            overflow: scroll;
+            position: relative;
+            width: 1200px;
+        }
+        #video {
+            -ms-transform: translate(-50%, -50%);
+            -moz-transform: translate(-50%, -50%);
+            -webkit-transform: translate(-50%,-50%);
+            transform: translate(-50%, -50%);
+            left: 50%;
+            position: fixed;
+            top: 50%;
+            display: none;
+        }
+        #content {
+            height: 2200px;
+        }
+        #loading {
+            -ms-transform: translate(-50%, -50%);
+            -moz-transform: translate(-50%, -50%);
+            -webkit-transform: translate(-50%,-50%);
+            transform: translate(-50%, -50%);
+            position: absolute;
+            left: 50%;
+            top: 50%;
+        }
+        </style>
+        <link rel="icon" type="image/png" href="logo.png">
+    </head>
+    <body>
+        <video id="video"></video>
+        <div id="container">
+            <div id="content"><div id="loading">Loading video...</div></div>
+        </div>
+        <script src="http://code.jquery.com/jquery-2.1.1.min.js"></script>
+        <script src="dist/scrub.min.js"></script>
+        <script>
+            var $loading = $('#loading');
+            var $video = $('#video');
+            var baseUrl = 'http://d37cztry6hjvzg.cloudfront.net/mp4/ua5/';
+
+            $video.on('loaded', function() {
+                $loading.hide();
+                $video.show();
+            });
+
+            $video.scrub({
+                container: '#container',
+                contentBody: '#content',
+                urls: [
+                    baseUrl + 'aboutBg.mov',
+                    baseUrl + 'aboutBg.ogv'
+                ]
+            });
+        </script>
+    </body>
+</html>
