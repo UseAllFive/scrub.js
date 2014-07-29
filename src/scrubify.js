@@ -48,9 +48,9 @@ Package URL: https://github.com/UseAllFive/scrubify
             opts = $.extend({}, $.fn.scrubify.defaults, options);
             video = $self.get(0);
             $container = opts.container instanceof $ ? opts.container : $(opts.container);
-            containerHeight = $container.height();
+            containerHeight = $container.outerHeight();
             $contentBody = opts.contentBody instanceof $ ? opts.contentBody : $(opts.contentBody);
-            contentBodyHeight = $contentBody.height();
+            contentBodyHeight = $contentBody.outerHeight();
 
             video.addEventListener('loadedmetadata', function() {
                 videoDuration = video.duration;
@@ -70,10 +70,10 @@ Package URL: https://github.com/UseAllFive/scrubify
             }
 
             $container.resize(function() {
-                containerHeight = $container.height();
+                containerHeight = $container.outerHeight();
             });
             $contentBody.resize(function() {
-                contentBodyHeight = $contentBody.height();
+                contentBodyHeight = $contentBody.outerHeight();
             });
         }
 
