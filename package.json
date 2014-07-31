@@ -1,14 +1,14 @@
 {
-  "name": "scrubify.js",
+  "name": "scrub.js",
   "version": "0.0.0",
   "description": "Map page scroll progress to a video timeline",
-  "main": "src/scrubify.js",
+  "main": "src/scrub.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/UseAllFive/scrubify.js.git"
+    "url": "https://github.com/UseAllFive/scrub.js.git"
   },
   "keywords": [
     "video",
@@ -21,9 +21,9 @@
   "author": "Zachary Brown <zeebz91@gmail.com>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/UseAllFive/scrubify.js/issues"
+    "url": "https://github.com/UseAllFive/scrub.js/issues"
   },
-  "homepage": "https://github.com/UseAllFive/scrubify.js",
+  "homepage": "https://github.com/UseAllFive/scrub.js",
   "devDependencies": {
     "ua5-frontend-standards": "0.0.4"
   }

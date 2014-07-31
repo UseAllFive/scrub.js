@@ -1,11 +1,11 @@
-Scrubify.js ![](logo.png)
+scrub.js ![](logo.png)
 ==================
 Map scroll progress to a video timeline. As seen on http://useallfive.com/process/.
 
 ## Examples
-[Video mapped to document scroll](http://useallfive.github.io/scrubify.js/document-example.html)
+[Video mapped to document scroll](http://useallfive.github.io/scrub.js/document-example.html)
 
-[Video mapped to div scroll](http://useallfive.github.io/scrubify.js/inside-div-example.html)
+[Video mapped to div scroll](http://useallfive.github.io/scrub.js/inside-div-example.html)
 
 
 # Usage
@@ -24,7 +24,7 @@ Map scroll progress to a video timeline. As seen on http://useallfive.com/proces
 ### Include plugin after jQuery.
 ```html
 <script src="http://code.jquery.com/jquery-2.1.1.min.js"></script>
-<script src="dist/scrubify.min.js"></script>
+<script src="dist/scrub.min.js"></script>
 ```
 
 ### Add video element. (Minimum markup)
@@ -36,12 +36,12 @@ Map scroll progress to a video timeline. As seen on http://useallfive.com/proces
 
 # Code samples
 ### Map video `currentTime` to document scroll progress (default)
-[Working example](http://useallfive.github.io/scrubify.js/document-example.html)
+[Working example](http://useallfive.github.io/scrub.js/document-example.html)
 
 Javascript
 ```javascript
 var $video = $('#background');
-$video.scrubify({
+$video.scrub({
     urls: [
         'aboutBg.mov',
         'aboutBg.ogv'
@@ -50,7 +50,7 @@ $video.scrubify({
 ```
 
 ### Map video `currentTime` to an element's scroll progress.
-[Working example](http://useallfive.github.io/scrubify.js/inside-div-example.html)
+[Working example](http://useallfive.github.io/scrub.js/inside-div-example.html)
 
 Example scrollable div markup
 ```html
@@ -75,7 +75,7 @@ Example scrollable div markup
 Javascript
 ```javascript
 var $video = $('#background');
-$video.scrubify({
+$video.scrub({
     container: '#container',
     contentBody: '#content',
     urls: [
@@ -86,17 +86,17 @@ $video.scrubify({
 ```
 
 ### Video ready event
-The jQuery selector on which the plugin was called will trigger a `loaded` event once scrubbing functionality has been bound. Be sure to bind to the `loaded` event before calling `scrubify()` to ensure that the loaded event doesn't fire before the custom event is bound.
+The jQuery selector on which the plugin was called will trigger a `loaded` event once scrubbing functionality has been bound. Be sure to bind to the `loaded` event before calling `scrub()` to ensure that the loaded event doesn't fire before the custom event is bound.
 ```javascript
 // Assume #loading is some div containing a loading indicator
 var $loading = $('#loading');
 var $video = $('#video');
-// Bind to the `loaded` event before calling scrubify to ensure that the 
+// Bind to the `loaded` event before calling scrub to ensure that the 
 // loaded event doesn't fire before the custom event is bound.
 $video.on('loaded', function() {
     $loading.hide();
     $video.show();
 });
 // ...
-$video.scrubify({ // ...
+$video.scrub({ // ...
 ```

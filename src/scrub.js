@@ -13,7 +13,7 @@ Author: Zachary Brown <zeebz91@gmail.com>
 Author URI: http://useallfive.com/
 
 Description: Map page scroll progress to a video timeline.
-Package URL: https://github.com/UseAllFive/scrubify
+Package URL: https://github.com/UseAllFive/scrub.js
 
 */
 (function(factory) {
@@ -25,7 +25,7 @@ Package URL: https://github.com/UseAllFive/scrubify
         factory(jQuery);
     }
 }(function($) {
-    $.fn.scrubify = function(options) {
+    $.fn.scrub = function(options) {
         var $container;
         var $contentBody;
         var $self;
@@ -45,7 +45,7 @@ Package URL: https://github.com/UseAllFive/scrubify
         };
 
         function _init() {
-            opts = $.extend({}, $.fn.scrubify.defaults, options);
+            opts = $.extend({}, $.fn.scrub.defaults, options);
             video = $self.get(0);
             $container = opts.container instanceof $ ? opts.container : $(opts.container);
             containerHeight = $container.outerHeight();
@@ -128,7 +128,7 @@ Package URL: https://github.com/UseAllFive/scrubify
         _init();
     };
 
-    $.fn.scrubify.defaults = {
+    $.fn.scrub.defaults = {
         preload: true,
         container: $(window),
         contentBody: $(document),
