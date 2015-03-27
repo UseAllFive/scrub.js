@@ -3,9 +3,9 @@ scrub.js ![](logo.png)
 Map scroll progress to a video timeline. As seen on http://useallfive.com/process/.
 
 ## Examples
-[Video mapped to document scroll](http://useallfive.github.io/scrub.js/document-example.html)
+[Video mapped to document scroll](https://useallfive.github.io/scrub.js/document-example.html)
 
-[Video mapped to div scroll](http://useallfive.github.io/scrub.js/inside-div-example.html)
+[Video mapped to div scroll](https://useallfive.github.io/scrub.js/inside-div-example.html)
 
 
 # Usage
@@ -36,7 +36,7 @@ Map scroll progress to a video timeline. As seen on http://useallfive.com/proces
 
 # Code samples
 ### Map video `currentTime` to document scroll progress (default)
-[Working example](http://useallfive.github.io/scrub.js/document-example.html)
+[Working example](https://useallfive.github.io/scrub.js/document-example.html)
 
 Javascript
 ```javascript
@@ -50,7 +50,7 @@ $video.scrub({
 ```
 
 ### Map video `currentTime` to an element's scroll progress.
-[Working example](http://useallfive.github.io/scrub.js/inside-div-example.html)
+[Working example](https://useallfive.github.io/scrub.js/inside-div-example.html)
 
 Example scrollable div markup
 ```html
